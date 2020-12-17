@@ -10,15 +10,11 @@ public class prac_quick {
 		for(int i : num) {
 			System.out.print(i + " ");
 		}
-
 	}
-	
 	public static void quickSort(int[] data, int start, int end) {
-		if(start >= end) {
-			return;
-		}
+		if(start >= end) return;
 		int key = start;
-		int i = start +1, j = end, temp;
+		int i = start+1, j = end, temp;
 		while(i <= j) {
 			while(i <= end && data[i] <= data[key]) {
 				i++;

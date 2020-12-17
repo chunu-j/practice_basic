@@ -23,11 +23,10 @@ public class prac {
 			System.out.print(i + " ");
 		}
 	}
-	
-	public static void bubble(int[] num) {
+	public static void bubble(int[] num) { // 1
 		int temp;
-		for(int i = 0; i < num.length ; i++) {
-			for(int j = 0 ; j < num.length -1 -i ; j++ ) {
+		for(int i = 0; i < num.length-1 ; i++) {
+			for(int j = 0 ; j < num.length -1 -i ; j++) {
 				if(num[j] > num[j+1]) {
 					temp = num[j];
 					num[j] = num[j+1];
@@ -36,10 +35,9 @@ public class prac {
 			}
 		}
 	}
-	
 	public static void selection(int[] num) {
-		int min, index, temp;
-		for(int i = 0 ; i < num.length ; i++) {
+		int temp, min, index;
+		for(int i = 0; i < num.length ; i++) {
 			min = 9999;
 			index = 0;
 			for(int j = i ; j < num.length ; j++) {
@@ -53,7 +51,6 @@ public class prac {
 			num[index] = temp;
 		}
 	}
-	
 	public static void insertion(int[] num) {
 		int temp;
 		for(int i = 0 ; i < num.length ; i++) {
