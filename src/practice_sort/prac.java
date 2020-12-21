@@ -23,42 +23,41 @@ public class prac {
 			System.out.print(i + " ");
 		}
 	}
-	public static void bubble(int[] num) { // 1
+	public static void bubble(int[] data) { // 2
 		int temp;
-		for(int i = 0; i < num.length-1 ; i++) {
-			for(int j = 0 ; j < num.length -1 -i ; j++) {
-				if(num[j] > num[j+1]) {
-					temp = num[j];
-					num[j] = num[j+1];
-					num[j+1] = temp;
+		for(int i = 0 ; i < data.length-1 ; i++) {
+			for( int j = 0; j < data.length-1-i ; j++) {
+				if(data[j] > data[j+1]) {
+					temp = data[j];
+					data[j] = data[j+1];
+					data[j+1] = temp;
 				}
 			}
 		}
 	}
-	public static void selection(int[] num) {
-		int temp, min, index;
-		for(int i = 0; i < num.length ; i++) {
+	public static void selection(int[] data) { // 1
+		int temp, index= 0, min;
+		for(int i = 0 ; i < data.length-1 ; i++) {
 			min = 9999;
-			index = 0;
-			for(int j = i ; j < num.length ; j++) {
-				if(min > num[j]) {
-					min = num[j];
+			for(int j = i ; j < data.length ; j++) {
+				if(min > data[j]) {
+					min = data[j];
 					index = j;
 				}
 			}
-			temp = num[i];
-			num[i] = num[index];
-			num[index] = temp;
+			temp = data[i];
+			data[i] = data[index];
+			data[index] = temp;
 		}
 	}
-	public static void insertion(int[] num) {
+	public static void insertion(int[] data) { // 1
 		int temp;
-		for(int i = 0 ; i < num.length ; i++) {
+		for(int i = 0; i < data.length ; i++) {
 			for(int j = i ; j > 0 ; j--) {
-				if(num[j-1] > num[j]) {
-					temp = num[j-1];
-					num[j-1] = num[j];
-					num[j] = temp;
+				if(data[j-1] > data[j]) {
+					temp = data[j-1];
+					data[j-1] = data[j];
+					data[j] = temp;
 				}
 			}
 		}

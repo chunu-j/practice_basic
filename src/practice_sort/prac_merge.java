@@ -11,15 +11,7 @@ public class prac_merge {
 			System.out.print(i + " ");
 		}
 	}
-	public static int[] tmp = new int[10];
-	public static void mergeSort(int[] data, int start, int end) {
-		if(start < end) {
-			int middle = (start + end) / 2;
-			mergeSort(data, start, middle);
-			mergeSort(data, middle+1, end);
-			merge(data, start, middle, end);
-		}
-	}
+	public static int[] tmp = new int[10]; // 1
 	public static void merge(int[] data, int start, int middle, int end) {
 		int i = start, j = middle+1;
 		int k = start;
@@ -35,19 +27,27 @@ public class prac_merge {
 			k++;
 		}
 		if(i > middle) {
-			for(int t = j ; t <=end ; t++) {
+			for(int t = j ; t <= end ; t++) {
 				tmp[k] = data[t];
 				k++;
 			}
 		}
 		else {
-			for(int t = i ; t <=middle ; t++) {
+			for(int t = i ; t <= middle ; t++) {
 				tmp[k] = data[t];
 				k++;
 			}
 		}
 		for(int t = start ; t <= end ; t++) {
 			data[t] = tmp[t];
+		}
+	}
+	public static void mergeSort(int[] data, int start, int end) {
+		if(start < end) {
+			int middle = (start + end) / 2;
+			mergeSort(data, start, middle);
+			mergeSort(data, middle+1, end);
+			merge(data, start, middle, end);
 		}
 	}
 }
