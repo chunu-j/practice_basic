@@ -11,7 +11,7 @@ public class prac_quick {
 			System.out.print(i + " ");
 		}
 	}
-	public static void quickSort(int[] data, int start, int end) { // 1
+	public static void quickSort(int[] data, int start, int end) { // 2
 		int i = start, j = end;
 		int k = start, temp;
 		if(i >= j) return;

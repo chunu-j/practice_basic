@@ -9,7 +9,7 @@ public class prac_heap {
 			System.out.print(i + " ");
 		}
 	}
-	public static void heapSort(int[] data) {
+	public static void heapSort(int[] data) { // 1
 		int size = data.length;
 		for(int i = 1 ; i < size ; i++) {
 			int c = i;

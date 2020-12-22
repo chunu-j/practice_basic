@@ -11,7 +11,7 @@ public class prac_merge {
 			System.out.print(i + " ");
 		}
 	}
-	public static int[] tmp = new int[10]; // 1
+	public static int[] tmp = new int[10]; // 2
 	public static void merge(int[] data, int start, int middle, int end) {
 		int i = start, j = middle+1;
 		int k = start;

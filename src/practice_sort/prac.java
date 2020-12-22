@@ -23,7 +23,7 @@ public class prac {
 			System.out.print(i + " ");
 		}
 	}
-	public static void bubble(int[] data) { // 2
+	public static void bubble(int[] data) { // 3
 		int temp;
 		for(int i = 0 ; i < data.length-1 ; i++) {
 			for( int j = 0; j < data.length-1-i ; j++) {
@@ -35,7 +35,7 @@ public class prac {
 			}
 		}
 	}
-	public static void selection(int[] data) { // 1
+	public static void selection(int[] data) { // 2
 		int temp, index= 0, min;
 		for(int i = 0 ; i < data.length-1 ; i++) {
 			min = 9999;
@@ -50,7 +50,7 @@ public class prac {
 			data[index] = temp;
 		}
 	}
-	public static void insertion(int[] data) { // 1
+	public static void insertion(int[] data) { // 2
 		int temp;
 		for(int i = 0; i < data.length ; i++) {
 			for(int j = i ; j > 0 ; j--) {
